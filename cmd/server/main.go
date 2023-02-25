@@ -35,5 +35,5 @@ func main() {
 
 	app := fiber.New()
 	v1_routes.Accounts(app.Group("/v1"))
-	log.Fatalln(app.Listen(fmt.Sprintf(":%d", *port)))
+	log.Fatalln(app.Listen(fmt.Sprintf(":%d", port)))
 }
