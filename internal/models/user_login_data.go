@@ -6,12 +6,11 @@ import (
 
 type UserLoginData struct {
 	ID                      uint   `gorm:"primaryKey"`
-	OpaqueId                string `gorm:"unique;not null"`
-	LoginName               string `gorm:"unique;not null"`
+	OpaqueId                string `gorm:"unique;not null;index"`
+	LoginName               string `gorm:"unique;not null;index"`
 	PasswordHash            string `gorm:"not null"`
-	PasswordSalt            string `gorm:"not null"`
-	HashAlgorithmID         int
-	HashAlgorithm           HashAlgorithm
+	HashCostID              int
+	HashCost                HashCost
 	EmailAddress            string `gorm:"not null"`
 	ConfirmationToken       string
 	TokenGeneratedTime      time.Time

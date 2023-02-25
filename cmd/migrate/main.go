@@ -17,7 +17,7 @@ func main() {
 
 	if err := db.AutoMigrate(
 		&models.EmailValidationStatus{},
-		&models.HashAlgorithm{},
+		&models.HashCost{},
 		&models.UserLoginData{},
 	); err != nil {
 		log.Fatalln(err)

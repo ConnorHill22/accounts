@@ -7,7 +7,7 @@ import (
 )
 
 var model_to_prefix_map = map[string]string{
-	"User": "u-",
+	"UserLoginData": "u-",
 }
 
 func Generate(model_name string) string {
